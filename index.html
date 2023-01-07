@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Natalia Krauze">
+    <meta name="description" content="Strona wykonana w ramach przedmiotu Tworzenie Stron Internetowych">
+    <meta name="keywords" content="Tworzenie Stron, HTML, CSS, JavaScript">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+   <!-- Mój CSS --> 
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Libre+Baskerville:ital@1&family=Mate+SC&display=swap" rel="stylesheet"> 
+    <title>Jasność graniczna</title>
+  </head>
+  <body>
+    <!-- Nawigacja -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="index.html"><img src="images/logo.svg" width="30" height="30" class="d-inline-block align-top" alt="Logo"> Jasność graniczna</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="nav navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#info">Informacje</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#before">Zanim zaczniesz</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#raport">Raport obserwacyjny</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Nagłówek -->
+    <header class="masthead">
+      <div class="container h-100">
+        <div class="row h-100 align-items-center">
+          <div class="col-12 text-center">
+            <h1 class="font-weight-bold">Jasność graniczna</h1>
+            <p class="lead">Instrukcja dla obserwatora</p>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Informacje -->
+    <section id="info">
+      <div class="card mb-3">
+          <div class="card-body">
+            <h5 class="card-title">Czym jest jasność graniczna i po co ją wyznaczać?</h5>
+            <p class="card-text">Jasność graniczna to jasność najsłabszych gwiazd, które możesz zobaczyć na niebie. Im ciemniejsze niebo, tym słabsze gwiazdy można dostrzec. Jeśli określimy, jakie najsłabsze gwiazdy widzimy, to oszacujemy jak ciemne jest niebo nocne. Jasność nocnego nieba silnie zależy od poziomu <a href="http://www.ciemneniebo.pl/pl/zanieczyszczenie-sztucznym-swiatlem">zanieczyszczenia świtałem</a>. Wyznaczenie jasności granicznej jest prosta metodą pozwalającą oszacować poziom tego zanieczyszczenia w miejscu wykonywania obserwacji.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="images/card.png" class="card-img-top" alt="Teleskop">
+          <div class="card-body">
+            <h5 class="card-title">Jak oszacować jasność graniczną?</h5>
+            <p class="card-text">Można to zrobić szukając najsłabszej gwiazdy, którą widzą nasze oczy. Ale ta metoda nie jest wygodna. Trudno jest np. porównać, która z dwóch gwiazd jest słabsza, jeśli znajdują się one na niebie daleko od siebie. Znacznie wygodniejsza jest metoda zaproponowana przez <a href="http://www.imo.net/">Międzynarodową Organizację Meteorową</a>. Metoda opiera się na zliczeniu gwiazd w pewnych obszarach nieba. Obszary te ograniczone są przez trzy lub cztery jasne gwiazdy i jest ich 30. Przy ciemniejszym niebie widać w każdym z tych obszarów więcej gwiazd. Wystarczy, więc:</p>
+            <ol>
+                <li>wybrać jeden lub kilka z 30 dostępnych obszarów,</li>
+                <li>policzyć, ile gwiazd widzimy w danym obszarze,</li>
+                <li>dodać do tego gwiazdy, które wyznaczają granice obszaru,</li>
+                <li>a następnie przeliczyć liczbę gwiazd na jasność graniczną korzystając ze specjalnych tabel.</li>
+            </ol>
+            <p>Do pomiarów w pierwszej połowie roku wygodne są cztery następujące obszary znajdujące się w gwiazdozbiorach:</p>
+            <ul>
+                <li>Wielkiej Niedźwiedzicy (obszar  nr 3),</li>
+                <li>Lwa (obszar nr 9),</li>
+                <li>Wolarza i Korony Północnej (obszar nr 11),</li>
+                <li>Psów Gończych i Wielkiej Niedźwiedzicy (obszar nr 16).</li>
+            </ul>
+             <p>Dokładne  położenie tych obszarów pokazuje <a href="#mapa">mapka zamieszczona poniżej </a>. Mapa, tabele umożliwiające przeliczenie liczby widocznych gwiazd na jasność graniczną oraz numeracja obszarów pochodzą z <cite>Handbook for Visual Meteor Observers</cite> wydanego przez Międzynarodową Organizację Meteorową .</p>
+          </div>
+        </div>
+    </section>
+    <!-- Zanim zaczniesz -->
+    <section id="before">
+        <img src="images/accordion.png" class="img-fluid" alt="Góry, książyc i teleskop">
+        <div id="accordion">
+          <div class="card">
+            <div class="card-header" id="headingOne">
+              <h5 class="mb-0">
+                  <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Wykonanie pomiaru </button>
+              </h5>
+            </div>
+
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+              <div class="card-body">
+                Pomiar jasności granicznej jest prosty i wykonuje się go „gołym okiem”, czyli bez użycia sprzętu optycznego (lornetka, teleskop). Pomiar przebiega w następujących krokach:
+                <ol>
+                    <li>Sprawdź, gdzie na niebie widoczne są obszary nr 3, 9, 11 i 16 w noc prowadzenia pomiarów. Wykorzystać do tego można mapę obrotową nieba lub <a href="http://stellarium.org/pl/">program Stellarium</a> służący do symulacji wyglądu nocnego nieba.</li>
+                    <li>Wybierz, które z obszarów chcesz użyć do pomiaru jasności granicznej. Możesz użyć jednego, dwóch, trzech lub wszystkich czterech. Jedynym warunkiem jest to, żeby użyty obszar znajdował się minimum 45 stopni nad horyzontem.</li>
+                    <li>Poczekaj aż zapadnie noc i znajdź wygodne miejsce do obserwacji. Aby pomiar był wiarygodny, musisz poczekać aż skończy się zmierzch i zakończyć obserwację zanim zacznie się świt. Miejsce obserwacji powinno mieć szeroko otwarty widok na niebo i być oddalone od ulicznych świateł.</li>
+                    <li>Zapisz datę, czas i położenie miejsca wykonywania obserwacji. Nie pomijaj tych danych, ponieważ są bardzo istotne przy wyznaczaniu poziomu zanieczyszczenia światłem z obserwacji nieba.</li>
+                    <li>Przyzwyczaj wzrok do ciemności zanim rozpoczniesz obserwację. Dzięki temu twoje oczy będą bardziej czułe i zobaczysz więcej gwiazd.</li>
+                    <li>Znajdź na niebie wybrane do obserwacji obszary i policz, ile widzisz w nich gwiazd. Wynik zapisz. Uważaj czy chmury nie przesłaniają nieba w tych obszarach.</li>
+                    <li>Wypełnij raport obserwacyjny. Po zakończeniu obserwacji wpisz niezbędne informacje w raporcie. Liczbę gwiazd (N), które były widoczne w obserwowanych obszarach, podasz w tabeli, która automatycznie przeliczy ją na odpowiadającą jasność graniczną (LM).</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingTwo">
+              <h5 class="mb-0">
+                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  Wyjaśnienia
+                </button>
+              </h5>
+            </div>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+              <div class="card-body">
+                Oznaczenia występujące w raporcie obserwacyjnym przy opisie obszarów, np. &alpha; <i>Boo</i>, to oznaczenia gwiazd tworzących dany obszar. Boo to skrót od łacińskiej nazwy gwiazdozbioru Wolarza <i>(Bootes)</i>, &alpha; to pierwsza litera greckiego alfabetu. &alpha; Boo oznacza pierwszą (najjaśniejszą) gwiazdę w gwiazdozbiorze Wolarza. W tabelach N oznacza liczbę gwiazd widocznych w danym obszarze łącznie z gwiazdami wyznaczającymi obszar. LM (limiting magnitude) to odpowiadająca N jasność graniczna. Jasność ta wyrażona jest w <strong>wielkościach gwiazdowych </strong><i>(magnitudo, mag.)</i>, czyli jednostce jasności używanej w astronomii. Jednostka ta ma ciekawą własność – im większa liczba, tym słabsza jest gwiazda. Dla przykładu Wega (najjaśniejsza gwiazda w gwiazdozbiorze Lutni) ma jasność 0 mag. Jest ona jaśniejsza od Gwiazdy Polarnej mającej jasność 2 mag.
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingThree">
+              <h5 class="mb-0">
+                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  Przykładowe wyniki
+                </button>
+              </h5>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+              <div class="card-body">
+                Jakich jasności granicznych możemy oczekiwać? Podajemy tu dwa skrajne przykłady: 
+                <ul>
+                    <li>niebo nad dużym miastem (wysoki poziom zanieczyszczenia światłem): 4.0 mag. lub nawet gorzej,</li>
+                    <li>naturalnie ciemne niebo nocne (zerowy poziom zanieczyszczenia światłem): 6.5 mag lub lepiej (zależy też od oka obserwatora).</li>
+                </ul>
+                Jak widać ciemniejsze niebo (mniej zanieczyszczone światłem) ma jasność graniczną wyrażoną większą liczbą, czyli widoczne są na nim słabiej świecące gwiazdy. 
+              </div>
+            </div>
+          </div>
+        </div>
+        <figure class="text-center">
+          <img id="mapa" src="images/mapa.jpg" class="figure-img img-fluid rounded" alt="Mapa nieba">
+          <figcaption class="figure-caption text-center">Mapa nieba z zaznaczonymi obszarami 3, 9, 11, 16 (źródło: Handbook for Visual Meteor Observers) </figcaption>
+        </figure>
+    </section>
+    <!-- Raport -->
+    <section id="raport">
+        <h2>Raport obserwacyjny</h2>
+        <form>
+          <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Miejsce obserwacji</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="inputVenue">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Data i czas obserwacji</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="inputDate">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Obserwatorzy</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="inputObserwatorzy">
+            </div>
+          </div>
+        </form>
+        <h5>Tablica wyznaczenia jasności granicznej (wybierz liczbę gwiazd, a komówka z jasnością graniczną zostanie wypełniona)</h5>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">obszar</th>
+              <th scope="col">liczba gwiazd (N)</th>
+              <th scope="col">jasność graniczna (LM)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>3</strong> (23 UMa - &theta; UMa - &beta; UMa)<br>Wielka Niedźwiedzica <i>(łac. Ursa Maior)</i></td>
+              <td>
+                  <select onchange = "pole3()" class="form-select" aria-label="Default select example"> </select>
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><strong>9</strong> (&alpha; Leo - &beta; Leo - &gamma; Leo - &delta; Leo)<br>Lew <i>(łac. Leo)</i></td>
+              <td>
+                  <select onchange = "pole9()" class="form-select" aria-label="Default select example"> </select>
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><strong>11</strong> (&alpha; CrB -  &gamma; Boo - &alpha; Boo)<br>Wolarz - Korona Północna<br><i>(łac. Bootes - Corona Borealis)</i></td>
+              <td>
+                  <select onchange = "pole11()" class="form-select" aria-label="Default select example"> </select>
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+                <td><strong>16</strong> (&alpha; CVn -  &epsilon; UMa - &eta; UMa)<br>Psy Gończe - Wielka Niedźwiedzica<br><i>(łac. Canes Venatici - Ursa Major</i>)</td>
+                <td>
+                    <select onchange = "pole16()" class="form-select" aria-label="Default select example"> </select>
+                </td>
+                <td></td>
+            </tr>
+          </tbody>
+        </table>
+    </section>
+    <!-- Boostrap Script -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- Mój script -->
+    <script src="script.js"></script>
+  </body>
+</html>

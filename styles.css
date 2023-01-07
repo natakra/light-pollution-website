@@ -1,0 +1,91 @@
+* {
+    scroll-behavior: smooth;
+}
+
+.navbar-brand {
+    font-family: 'Libre Baskerville', serif;
+}
+
+#navbarNav {
+    font-family: 'Mate SC', serif;
+}
+
+#navbarNav ul li a {
+    color: #154c79;
+}
+
+#navbarNav ul li a:hover {
+    color: #e28743;
+}
+
+.masthead {
+  height: 100vh;
+  min-height: 500px;
+  background-image: url('images/front2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+
+}
+
+.masthead h1 {
+  font-family: 'Dancing Script', cursive; 
+  font-size: 5rem;
+}
+
+.masthead p {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 2rem;
+}
+
+#info .card-title  {
+   color: #154c79;
+   font-family: 'Libre Baskerville', serif; 
+}
+
+#before .card-header button{
+    font-family: 'Libre Baskerville', serif; 
+    color: #154c79;
+    font-size: 22px;
+}
+
+#before figure {
+    margin: 50px;
+}
+
+#before figure img {
+    border: 2px solid #154c79;
+}
+
+#before figcaption {
+    font-family: 'Mate SC', serif;
+    color: #154c79;
+}
+
+#raport {
+    font-family: 'Libre Baskerville', serif;
+    margin: 20px;
+}
+
+#raport h2 {
+    font-family: 'Mate SC', serif;
+    text-align: center;
+}
+
+#raport form {
+    margin: 40px;
+}
+
+#raport form input {
+    border: 1px solid #154c79;
+}
+
+#raport h5 {
+    text-align: center;
+    font-size: 1rem;
+}
+
+#raport table {
+    text-align: center; 
+}

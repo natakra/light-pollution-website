@@ -1,0 +1,157 @@
+<?php
+session_start();
+include 'db_connection.php';
+error_reporting(0);
+
+//$query = "SELECT * FROM `pairs`";
+$query = "SELECT * FROM `pairs` order by rand() limit 3;";
+$search_result = $mysqli->query($query);
+
+?>
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pary</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <style>
+            table {
+                border-collapse: collapse;
+                width: 100%;
+            }
+
+            td, th {
+                border: 1px solid #dddddd;
+                text-align: left;
+                padding: 8px;
+            }
+
+            .unselectable {
+                background-color: "green";
+                cursor: not-allowed;
+            }
+        </style>
+    </head>
+    <body>
+        <table>
+        <tr>
+        <?php 
+            while($row = mysqli_fetch_assoc($search_result)){
+                $new_array[] = $row;
+            }
+            foreach($new_array as $array){
+                echo '<td id="'.$array['pairs_id'].'">'.$array['pairs_one'].'</td>';
+            }
+            echo '</tr>';
+            echo '<tr>';
+            shuffle($new_array);
+            foreach($new_array as $array){
+                echo '<td onclick="click_event(this);" id="'.$array['pairs_id'].'">'.$array['pairs_two'].'</td>';
+            }
+        ?>
+        </tr>
+        </table>
+        <br>
+        <button onclick="reset()">RESET</button>
+        <button onclick="check()">SPRAWDŹ</button>
+        <p id="info">T</p>
+    </body>
+    <script>
+        var counter = 0;
+        var tds = document.getElementsByTagName('td');
+        tds[0].style.backgroundColor = '#ff6600';
+        tds[0].classList.add("clicked-orange", "unselectable");
+        tds[1].style.backgroundColor = '#ff99ff';
+        tds[1].classList.add("clicked-pink", "unselectable");
+        tds[2].style.backgroundColor = '#ffffcc';
+        tds[2].classList.add("clicked-yellow", "unselectable");
+        
+        function click_event(elem) {
+            if(counter == 0) {
+                elem.style.backgroundColor = '#ff6600';
+                elem.classList.add("clicked-orange", "unselectable");
+            }
+            
+            if(counter == 1) {
+                elem.style.backgroundColor = '#ff99ff';
+                elem.classList.add("clicked-pink", "unselectable");
+            }
+            
+            if(counter == 2) {
+                elem.style.backgroundColor = '#ffffcc';
+                elem.classList.add("clicked-yellow", "unselectable");
+            }
+            
+            counter += 1;
+        }
+        
+        function reset() {
+            for(var i = 3; i < 6; i++) {
+                tds[i].style.backgroundColor = 'white';
+                tds[i].className = '';
+            }
+            counter = 0;
+        }
+        
+        function check() {
+            var good_answers = 0;
+            var pair1 = document.getElementsByClassName("clicked-orange");
+            if(pair1[0].id == pair1[1].id) {
+                console.log("Para Pomarańczowa okej");
+                good_answers += 1;
+            }
+            else {
+                console.log("Para pomarańczowa źle");
+            }
+            
+            var pair2 = document.getElementsByClassName("clicked-pink");
+            if(pair2[0].id == pair2[1].id) {
+                console.log("Para różowa okej");
+                good_answers += 1;
+            }
+            else {
+                console.log("Para różowa źle");
+            }
+            
+            var pair3 = document.getElementsByClassName("clicked-yellow");
+            if(pair3[0].id == pair3[1].id) {
+                console.log("Para żółta okej");
+                good_answers += 1;
+            }
+            else {
+                console.log("Para żółta źle");
+            }
+            
+            document.getElementById("info").innerHTML = "Zrobiłeś " + good_answers + " na 3 dobrze.";
+            
+        }
+        
+        /*function click_event(elem) {
+            if(elem.style.backgroundColor == 'red') {
+                elem.style.backgroundColor = 'white';
+                if(elem.classList.contains("clicked"))
+                    elem.classList.remove("clicked");
+            }
+            else {
+                elem.style.backgroundColor = 'red';
+                elem.classList.add("clicked");
+            }
+
+            check_clicked();
+        }*/
+
+
+        /*function check_clicked() {
+            var clicked_tds = document.querySelectorAll(".clicked");
+            console.log(clicked_tds);
+            if(clicked_tds[0].className == clicked_tds[1].className) {
+                console.log("success")
+                for(var i = 0; i < 2; i++) {
+                    clicked_tds[i].classList.add("unselectable");
+                    clicked_tds[i].classList.remove("clicked");
+                    clicked_tds[i].style.backgroundColor = 'green';
+                }
+            }
+        }*/
+    </script>
+</html>
